@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELEVEN POINT TWO — Concert & Entertainment Production Agency</title>
+  <meta name="description"
+    content="Eleven Point Two is India's leading concert production, live entertainment, and artist management agency creating extraordinary musical and experiential events.">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Three.js CDN for Cinematic 3D Scene -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Scroll Progress Bar Top -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Ambient Glow & Grid Background -->
+  <div class="bg-glow-container">
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+    <div class="bg-glow-3"></div>
+    <div class="bg-grid-pattern"></div>
+  </div>
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="custom-cursor-follower" id="customCursorFollower"></div>
+
+  <!-- STICKY HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#" class="brand-logo" aria-label="Eleven Point Two Logo">
+        <svg class="official-logo-svg" viewBox="0 0 450 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- ELEVEN -->
+          <text x="0" y="55" font-family="'Syne', 'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="64"
+            fill="#ffffff" letter-spacing="2">ELEVEN</text>
+          <!-- POINT -->
+          <text x="0" y="115" font-family="'Syne', 'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="44"
+            fill="#38bdf8" letter-spacing="1">POINT</text>
+          <!-- TWO with Splash Flourish -->
+          <text x="160" y="125" font-family="'Syne', 'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="80"
+            fill="#ffffff" letter-spacing="1">TWO</text>
+          <!-- Splash Flourish on O -->
+          <path d="M 375 95 C 410 75, 425 65, 438 60 C 420 72, 400 88, 375 95 Z" fill="#38bdf8" />
+          <circle cx="410" cy="98" r="4" fill="#38bdf8" />
+          <circle cx="425" cy="90" r="3" fill="#38bdf8" />
+          <circle cx="430" cy="108" r="2.5" fill="#38bdf8" />
+        </svg>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#planner" class="nav-link">Plan Event</a></li>
+          <li><a href="#artists" class="nav-link">Artists</a></li>
+          <li><a href="#shows" class="nav-link">Upcoming Shows</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <button class="btn btn-outline js-open-plan-modal">Plan Your Event</button>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="home">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <!-- Three.js Cinematic 3D Scene Container -->
+      <div id="threeHeroContainer" class="three-hero-container"></div>
+
+      <!-- Ambient Particle Beams Canvas -->
+      <canvas class="hero-particle-canvas" id="heroParticleCanvas"></canvas>
+
+      <!-- Scrolling Artist Image Columns Background (MAK Management style) -->
+      <div class="hero-bg-columns">
+        <div class="bg-column">
+          <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=400&q=80"
+            alt="Concert Stage">
+          <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=400&q=80"
+            alt="Crowd Lights">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=400&q=80"
+            alt="DJ Performing">
+          <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=400&q=80"
+            alt="Live Event Stage">
+        </div>
+        <div class="bg-column">
+          <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=400&q=80"
+            alt="Live Music">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=80"
+            alt="Laser Festival">
+          <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=400&q=80"
+            alt="Spotlight Arena">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80"
+            alt="Singer Spotlight">
+        </div>
+        <div class="bg-column">
+          <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=400&q=80"
+            alt="Concert Arena">
+          <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=400&q=80"
+            alt="Stadium Concert">
+          <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=400&q=80"
+            alt="Performance Visuals">
+          <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=400&q=80"
+            alt="Festival Fireworks">
+        </div>
+        <div class="bg-column">
+          <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=400&q=80"
+            alt="Concert Crowd">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=400&q=80"
+            alt="Sound Stage">
+          <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=400&q=80"
+            alt="Lighting rig">
+          <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=400&q=80"
+            alt="Music Festival">
+        </div>
+        <div class="bg-column">
+          <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=400&q=80"
+            alt="Singer Performing">
+          <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=400&q=80"
+            alt="Band Stage">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=80"
+            alt="Pyrotechnics">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80"
+            alt="Microphone Spotlight">
+        </div>
+        <div class="bg-column">
+          <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=400&q=80"
+            alt="Stadium Crowds">
+          <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=400&q=80"
+            alt="Concert Spectacle">
+          <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=400&q=80"
+            alt="Laser Lights">
+          <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=400&q=80"
+            alt="Stage Show">
+        </div>
+      </div>
+
+      <div class="container hero-content reveal-scale">
+        <!-- Audio Visualizer Badge -->
+        <div class="audio-equalizer-badge">
+          <div class="eq-bars">
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+          </div>
+          <span>INDIA'S PREMIER CONCERT & ENTERTAINMENT COMPANY</span>
+        </div>
+
+        <h1 class="hero-title">
+          CRAFTING <span class="italic-accent">musical</span> & <span class="cyan-text shimmer-text">EXPERIENTIAL</span>
+          EVENTS
+        </h1>
+
+        <p class="hero-subtitle">
+          End-to-end concert production, stadium tour management, and identity-driven cultural experiences that
+          captivate millions.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-outline js-open-showreel-modal" data-cursor="video">
+            <div class="btn-play-icon">
+              <svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor">
+                <path d="M1.5 1.5L10.5 7L1.5 12.5V1.5Z"></path>
+              </svg>
+            </div>
+            <span>Watch Showreel</span>
+          </button>
+
+          <button class="btn btn-cyan js-open-plan-modal">
+            <span>Plan Your Event</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 12L10 8L6 4"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Marquee Artist Strip -->
+      <div class="marquee-wrapper reveal">
+        <div class="marquee-content">
+          <div class="marquee-item"><span class="highlight">ILAIYARAAJA</span> • LIVE IN CONCERT</div>
+          <div class="marquee-item"><span class="highlight">K.S. CHITHRA</span> • TIMELESS MELODIES</div>
+          <div class="marquee-item"><span class="highlight">SHREYA GHOSHAL</span> • ARENA TOUR</div>
+          <div class="marquee-item"><span class="highlight">SHANKAR MAHADEVAN</span> • BREATHLESS TOUR</div>
+          <div class="marquee-item"><span class="highlight">KOTI</span> • SYMPHONIC NIGHTS</div>
+          <div class="marquee-item"><span class="highlight">SUNITHA UPADRASTA</span> • CELEBRATING MUSIC</div>
+          <div class="marquee-item"><span class="highlight">YESUDAS</span> • LEGENDARY CONCERTS</div>
+          <div class="marquee-item"><span class="highlight">ILAIYARAAJA</span> • LIVE IN CONCERT</div>
+          <div class="marquee-item"><span class="highlight">K.S. CHITHRA</span> • TIMELESS MELODIES</div>
+          <div class="marquee-item"><span class="highlight">SHREYA GHOSHAL</span> • ARENA TOUR</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS COUNTER STRIP -->
+    <section class="stats-section" id="about">
+      <div class="container">
+        <div class="stats-grid">
+
+          <div class="glass-card stat-card reveal delay-1">
+            <div class="stat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <div>
+              <div class="stat-number" data-target="150" data-suffix="+">0</div>
+              <div class="stat-label">Events Produced</div>
+            </div>
+          </div>
+
+          <div class="glass-card stat-card reveal delay-2">
+            <div class="stat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+              </svg>
+            </div>
+            <div>
+              <div class="stat-number" data-target="100" data-suffix="+">0</div>
+              <div class="stat-label">Artists Collaborated</div>
+            </div>
+          </div>
+
+          <div class="glass-card stat-card reveal delay-3">
+            <div class="stat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="stat-number" data-target="100" data-suffix="+">0</div>
+              <div class="stat-label">Brands Associated</div>
+            </div>
+          </div>
+
+          <div class="glass-card stat-card reveal delay-4">
+            <div class="stat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <div class="stat-number" data-target="10" data-suffix="M+">0</div>
+              <div class="stat-label">Audience Reached</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 'WHAT WE DO' 5-COLUMN FEATURE GRID -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-header reveal-scale">
+          <span class="section-eyebrow">WHAT WE DO</span>
+          <h2 class="section-title">OUR <span class="italic-accent">specialized</span> SERVICES</h2>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="glass-card service-card card-theme-cyan reveal-scale delay-1">
+            <div>
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M9 18V5l12-2v13"></path>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <circle cx="18" cy="16" r="3"></circle>
+                </svg>
+              </div>
+              <h3 class="service-title">LIVE CONCERTS</h3>
+              <p class="service-desc">End-to-end production of world-class musical concerts, stadium tours, and arena
+                spectacles.</p>
+            </div>
+
+          </div>
+
+          <div class="glass-card service-card card-theme-purple reveal-scale delay-2">
+            <div>
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">CORPORATE EVENTS</h3>
+              <p class="service-desc">Impactful corporate experiences, galas, and brand summits that inspire and engage
+                audiences.</p>
+            </div>
+
+          </div>
+
+          <div class="glass-card service-card card-theme-gold reveal-scale delay-3">
+            <div>
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2z">
+                  </path>
+                  <path d="M13 5v14"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">TICKETING & PROMOTION</h3>
+              <p class="service-desc">Smart ticketing solutions, targeted marketing campaigns, and data-driven event
+                promotions.</p>
+            </div>
+
+          </div>
+
+          <div class="glass-card service-card card-theme-emerald reveal-scale delay-4">
+            <div>
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                  <path
+                    d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="service-title">ARTIST MANAGEMENT</h3>
+              <p class="service-desc">Nurturing talent, booking international performers, and managing high-capacity
+                artist line-ups.</p>
+            </div>
+
+          </div>
+
+          <div class="glass-card service-card card-theme-pink reveal-scale delay-5">
+            <div>
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                  </polygon>
+                </svg>
+              </div>
+              <h3 class="service-title">CREATIVE & PRODUCTION</h3>
+              <p class="service-desc">Innovative stage design, lighting choreography, sound engineering, and
+                audio-visual mastery.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTIST SHOWCASE INFINITE MARQUEE (Right to Left) -->
+    <section class="artists-section" id="artists">
+      <div class="container">
+        <div class="section-header reveal-scale">
+          <span class="section-eyebrow">TALENT LINEUP</span>
+          <h2 class="section-title">ARTISTS WE'VE <span class="cyan-text">WORKED WITH</span></h2>
+        </div>
+
+        <div class="infinite-marquee-wrapper reveal" style="margin-top: 40px;">
+          <div class="infinite-marquee-track">
+
+            <div class="glass-card artist-card">
+              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80"
+                alt="Ilaiyaraaja" class="artist-card-img">
+              <div class="artist-card-overlay">
+                <h4 class="artist-name">ILAIYARAAJA</h4>
+              </div>
+            </div>
+
+            <div class="glass-card artist-card">
+              <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=400&q=80"
+                alt="K.S. Chithra" class="artist-card-img">
+              <div class="artist-card-overlay">
+                <h4 class="artist-name">K.S. CHITHRA</h4>
+              </div>
+            </div>
+
+            <div class="glass-card artist-card">
+              <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=400&q=80"
+                alt="Yesudas" class="artist-card-img">
+              <div class="artist-card-overlay">
+                <h4 class="artist-name">YESUDAS</h4>
+              </div>
+            </div>
+
+            <div class="glass-card artist-card">
+              <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=400&q=80"
+                alt="Koti" class="artist-card-img">
+              <div class="artist-card-overlay">
+                <h4 class="artist-name">KOTI</h4>
+              </div>
+            </div>
+
+            <div class="glass-card artist-card">
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=400&q=80"
+                alt="Sunitha" class="artist-card-img">
+              <div class="artist-card-overlay">
+                <h4 class="artist-name">SUNITHA</h4>
+              </div>
+            </div>
+
+            <div class="glass-card artist-card">
+              <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=80"
+                alt="Shreya Ghoshal" class="artist-card-img">
+              <div class="artist-card-overlay">
+                <h4 class="artist-name">SHREYA GHOSHAL</h4>
+              </div>
+            </div>
+
+            <div class="glass-card artist-card">
+              <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=400&q=80"
+                alt="Shankar Mahadevan" class="artist-card-img">
+              <div class="artist-card-overlay">
+                <h4 class="artist-name">SHANKAR MAHADEVAN</h4>
+              </div>
+            </div>
+
+            <!-- Track Duplicate for Seamless 24/7 Infinite Scroll -->
+            <div class="glass-card artist-card">
+              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80"
+                alt="Ilaiyaraaja" class="artist-card-img">
+              <div class="artist-card-overlay">
+                <h4 class="artist-name">ILAIYARAAJA</h4>
+              </div>
+            </div>
+
+            <div class="glass-card artist-card">
+              <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=400&q=80"
+                alt="K.S. Chithra" class="artist-card-img">
+              <div class="artist-card-overlay">
+                <h4 class="artist-name">K.S. CHITHRA</h4>
+              </div>
+            </div>
+
+            <div class="glass-card artist-card">
+              <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=400&q=80"
+                alt="Yesudas" class="artist-card-img">
+              <div class="artist-card-overlay">
+                <h4 class="artist-name">YESUDAS</h4>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING SHOWS & PRODUCTIONS -->
+    <section class="productions-section" id="shows">
+      <div class="container">
+        <div class="section-header reveal-scale">
+          <span class="section-eyebrow">LIVE ARENA CALENDAR</span>
+          <h2 class="section-title">UPCOMING <span class="italic-accent">spectacular</span> SHOWS</h2>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="production-tabs reveal">
+          <button class="tab-btn active" data-filter="all">ALL SHOWS</button>
+          <button class="tab-btn" data-filter="concert">LIVE CONCERTS</button>
+          <button class="tab-btn" data-filter="symphonic">SYMPHONIC</button>
+          <button class="tab-btn" data-filter="festival">FESTIVALS</button>
+          <button class="tab-btn" data-filter="corporate">CORPORATE</button>
+        </div>
+
+        <div class="productions-grid">
+
+          <div class="glass-card production-card card-theme-cyan reveal-scale delay-1 js-open-ticket-modal"
+            data-category="concert">
+            <span class="show-date-badge">OCT 28, 2026</span>
+            <span class="show-status-badge">SELLING FAST</span>
+            <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=600&q=80"
+              alt="Koti Live" class="production-card-img">
+            <div class="production-overlay">
+              <span class="production-category">GACHIBOWLI STADIUM, HYDERABAD</span>
+              <h3 class="production-title">KOTI SYMPHONIC NIGHT 2026</h3>
+              <div class="production-play-btn" style="opacity: 1; transform: none; color: var(--accent-cyan);">
+                <span>🎟️ RESERVE TICKETS NOW</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card production-card card-theme-purple reveal-scale delay-2 js-open-ticket-modal"
+            data-category="symphonic">
+            <span class="show-date-badge">NOV 12, 2026</span>
+            <span class="show-status-badge">LIMITED VIP</span>
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80"
+              alt="Sunitha Concert" class="production-card-img">
+            <div class="production-overlay">
+              <span class="production-category">JLN STADIUM, NEW DELHI</span>
+              <h3 class="production-title">TIMELESS WITH SUNITHA LIVE</h3>
+              <div class="production-play-btn" style="opacity: 1; transform: none; color: var(--accent-purple);">
+                <span>🎟️ RESERVE TICKETS NOW</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card production-card card-theme-gold reveal-scale delay-3 js-open-ticket-modal"
+            data-category="festival">
+            <span class="show-date-badge">DEC 05, 2026</span>
+            <span class="show-status-badge">JUST ANNOUNCED</span>
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80"
+              alt="MLC Event" class="production-card-img">
+            <div class="production-overlay">
+              <span class="production-category">DY PATIL ARENA, MUMBAI</span>
+              <h3 class="production-title">MLC - MUSIC & COMEDY FESTIVAL</h3>
+              <div class="production-play-btn" style="opacity: 1; transform: none; color: var(--accent-gold);">
+                <span>🎟️ RESERVE TICKETS NOW</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card production-card card-theme-emerald reveal-scale delay-4 js-open-ticket-modal"
+            data-category="corporate">
+            <span class="show-date-badge">DEC 31, 2026</span>
+            <span class="show-status-badge">VIP AVAILABLE</span>
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80"
+              alt="Corporate Experiences" class="production-card-img">
+            <div class="production-overlay">
+              <span class="production-category">HITEX ARENA, HYDERABAD</span>
+              <h3 class="production-title">NEW YEAR EVE STAR ARENA</h3>
+              <div class="production-play-btn" style="opacity: 1; transform: none; color: var(--accent-emerald);">
+                <span>🎟️ RESERVE TICKETS NOW</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="view-all-center reveal">
+          <button class="btn btn-cyan js-open-ticket-modal">
+            <span>🎟️ BOOK TICKETS</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 12L10 8L6 4"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND TRUST WALL INFINITE MARQUEE (Right to Left) -->
+    <section class="brand-section reveal">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 40px;">
+          <span class="section-eyebrow">TRUSTED PARTNERS</span>
+          <h3 style="font-size: 20px; font-weight: 700;">BRANDS THAT TRUST <span class="cyan-text">US</span></h3>
+        </div>
+
+        <div class="infinite-marquee-wrapper">
+          <div class="infinite-marquee-track">
+
+            <div class="brand-item" title="SBI">
+              <svg viewBox="0 0 120 40" fill="#ffffff">
+                <circle cx="25" cy="20" r="14" fill="#ffffff" />
+                <circle cx="25" cy="14" r="5" fill="#07090e" />
+                <rect x="23" y="14" width="4" height="15" fill="#07090e" />
+                <text x="48" y="27" font-family="sans-serif" font-weight="900" font-size="22">SBI</text>
+              </svg>
+            </div>
+
+            <div class="brand-item" title="aha">
+              <svg viewBox="0 0 120 40" fill="#ffffff">
+                <text x="15" y="28" font-family="sans-serif" font-weight="900" font-size="28"
+                  letter-spacing="-1">aha</text>
+                <circle cx="85" cy="15" r="4" fill="#38bdf8" />
+              </svg>
+            </div>
+
+            <div class="brand-item" title="D.E. Shaw & Co">
+              <svg viewBox="0 0 140 40" fill="#ffffff">
+                <text x="10" y="25" font-family="serif" font-weight="700" font-size="18">D. E. Shaw & Co</text>
+              </svg>
+            </div>
+
+            <div class="brand-item" title="Yatra">
+              <svg viewBox="0 0 120 40" fill="#ffffff">
+                <text x="15" y="27" font-family="sans-serif" font-weight="800" font-size="24">yatra</text>
+                <path d="M85 10 L95 25 L75 25 Z" fill="#38bdf8" />
+              </svg>
+            </div>
+
+            <div class="brand-item" title="Hyderabad Metro Rail">
+              <svg viewBox="0 0 140 40" fill="#ffffff">
+                <rect x="10" y="10" width="20" height="20" rx="4" fill="#ffffff" />
+                <path d="M15 15 L25 15 L25 25 L15 25 Z" fill="#07090e" />
+                <text x="36" y="20" font-family="sans-serif" font-weight="700" font-size="10">HYDERABAD</text>
+                <text x="36" y="30" font-family="sans-serif" font-weight="900" font-size="11" fill="#38bdf8">METRO
+                  RAIL</text>
+              </svg>
+            </div>
+
+            <div class="brand-item" title="92.7 BIG FM">
+              <svg viewBox="0 0 130 40" fill="#ffffff">
+                <text x="10" y="27" font-family="sans-serif" font-weight="900" font-size="20">92.7 <tspan
+                    fill="#38bdf8">BIG FM</tspan></text>
+              </svg>
+            </div>
+
+            <div class="brand-item" title="ACT Fibernet">
+              <svg viewBox="0 0 120 40" fill="#ffffff">
+                <text x="10" y="27" font-family="sans-serif" font-weight="900" font-size="24"
+                  letter-spacing="1">ACT</text>
+                <text x="70" y="27" font-family="sans-serif" font-size="10" fill="#38bdf8">FIBERNET</text>
+              </svg>
+            </div>
+
+            <!-- Repeated Track Duplicate for Continuous Infinite Loop -->
+            <div class="brand-item" title="SBI">
+              <svg viewBox="0 0 120 40" fill="#ffffff">
+                <circle cx="25" cy="20" r="14" fill="#ffffff" />
+                <circle cx="25" cy="14" r="5" fill="#07090e" />
+                <rect x="23" y="14" width="4" height="15" fill="#07090e" />
+                <text x="48" y="27" font-family="sans-serif" font-weight="900" font-size="22">SBI</text>
+              </svg>
+            </div>
+
+            <div class="brand-item" title="aha">
+              <svg viewBox="0 0 120 40" fill="#ffffff">
+                <text x="15" y="28" font-family="sans-serif" font-weight="900" font-size="28"
+                  letter-spacing="-1">aha</text>
+                <circle cx="85" cy="15" r="4" fill="#38bdf8" />
+              </svg>
+            </div>
+
+            <div class="brand-item" title="D.E. Shaw & Co">
+              <svg viewBox="0 0 140 40" fill="#ffffff">
+                <text x="10" y="25" font-family="serif" font-weight="700" font-size="18">D. E. Shaw & Co</text>
+              </svg>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 'A GLIMPSE OF OUR WORLD' GALLERY STRIP -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header reveal-scale">
+          <span class="section-eyebrow">BEHIND THE SCENES</span>
+          <h2 class="section-title">A GLIMPSE OF OUR <span class="cyan-text">WORLD</span></h2>
+        </div>
+
+        <div class="gallery-row reveal-scale">
+
+          <div class="glass-card gallery-item card-theme-cyan js-open-showreel-modal" data-cursor="video">
+            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=400&q=80"
+              alt="World Glimpse 1" class="gallery-item-img">
+            <div class="gallery-overlay">
+              <div class="gallery-play-pulse">
+                <svg width="14" height="14" viewBox="0 0 12 14" fill="currentColor">
+                  <path d="M1.5 1.5L10.5 7L1.5 12.5V1.5Z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card gallery-item card-theme-purple js-open-showreel-modal" data-cursor="video">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=400&q=80"
+              alt="World Glimpse 2" class="gallery-item-img">
+            <div class="gallery-overlay">
+              <div class="gallery-play-pulse">
+                <svg width="14" height="14" viewBox="0 0 12 14" fill="currentColor">
+                  <path d="M1.5 1.5L10.5 7L1.5 12.5V1.5Z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- CENTER SPOTLIGHT ITEM -->
+          <div class="glass-card gallery-item card-theme-pink center-spotlight js-open-showreel-modal"
+            data-cursor="video">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=500&q=80"
+              alt="World Glimpse Center" class="gallery-item-img">
+            <div class="gallery-overlay">
+              <div class="gallery-play-pulse">
+                <svg width="18" height="18" viewBox="0 0 12 14" fill="currentColor">
+                  <path d="M1.5 1.5L10.5 7L1.5 12.5V1.5Z"></path>
+                </svg>
+              </div>
+              <span class="gallery-title-badge">EXPLORE GALLERY</span>
+            </div>
+          </div>
+
+          <div class="glass-card gallery-item card-theme-gold js-open-showreel-modal" data-cursor="video">
+            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=400&q=80"
+              alt="World Glimpse 4" class="gallery-item-img">
+            <div class="gallery-overlay">
+              <div class="gallery-play-pulse">
+                <svg width="14" height="14" viewBox="0 0 12 14" fill="currentColor">
+                  <path d="M1.5 1.5L10.5 7L1.5 12.5V1.5Z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card gallery-item card-theme-emerald js-open-showreel-modal" data-cursor="video">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=80"
+              alt="World Glimpse 5" class="gallery-item-img">
+            <div class="gallery-overlay">
+              <div class="gallery-play-pulse">
+                <svg width="14" height="14" viewBox="0 0 12 14" fill="currentColor">
+                  <path d="M1.5 1.5L10.5 7L1.5 12.5V1.5Z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- "WHAT ARE YOU PLANNING?" INTERACTIVE SECTION -->
+    <section class="planner-section" id="planner">
+      <div class="container">
+        <div class="section-header reveal-scale">
+          <span class="section-eyebrow">EVENT ORGANIZER WIZARD</span>
+          <h2 class="section-title">WHAT ARE YOU <span class="cyan-text">PLANNING?</span></h2>
+          <p style="color: var(--text-secondary); max-width: 600px; margin: 12px auto 0;">
+            Select your event type below to start customizing your stage, sound, artist line-up, and production scale.
+          </p>
+        </div>
+
+        <div class="planner-grid">
+
+          <div class="glass-card planner-card card-theme-cyan reveal-scale delay-1 js-open-plan-modal">
+            <div class="planner-icon">🎤</div>
+            <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">STADIUM CONCERT</h3>
+            <p style="font-size: 13px; color: var(--text-secondary);">Arena tours, music festivals & multi-artist
+              concerts.</p>
+            <div style="margin-top: 16px; font-size: 11px; font-weight: 700; color: var(--accent-cyan);">START PLANNING
+              →</div>
+          </div>
+
+          <div class="glass-card planner-card card-theme-purple reveal-scale delay-2 js-open-plan-modal">
+            <div class="planner-icon">🏢</div>
+            <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">CORPORATE GALA</h3>
+            <p style="font-size: 13px; color: var(--text-secondary);">Brand summits, product launches & award
+              ceremonies.</p>
+            <div style="margin-top: 16px; font-size: 11px; font-weight: 700; color: var(--accent-purple);">START
+              PLANNING →</div>
+          </div>
+
+          <div class="glass-card planner-card card-theme-gold reveal-scale delay-3 js-open-plan-modal">
+            <div class="planner-icon">🎓</div>
+            <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">COLLEGE FEST</h3>
+            <p style="font-size: 13px; color: var(--text-secondary);">University cultural pro-shows & celebrity star
+              nights.</p>
+            <div style="margin-top: 16px; font-size: 11px; font-weight: 700; color: var(--accent-gold);">START PLANNING
+              →</div>
+          </div>
+
+          <div class="glass-card planner-card card-theme-emerald reveal-scale delay-4 js-open-plan-modal">
+            <div class="planner-icon">🎉</div>
+            <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">PRIVATE VIP SHOW</h3>
+            <p style="font-size: 13px; color: var(--text-secondary);">Bespoke private celebrations & luxury concerts.
+            </p>
+            <div style="margin-top: 16px; font-size: 11px; font-weight: 700; color: var(--accent-emerald);">START
+              PLANNING →</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER CTA & CONTACT SECTION -->
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <div class="footer-top">
+
+        <div>
+          <h2 class="footer-headline">
+            LET'S CREATE SOMETHING <span class="cyan-text">EXTRAORDINARY</span> TOGETHER
+          </h2>
+          <p style="color: var(--text-secondary); max-width: 500px; margin-bottom: 24px;">
+            Plan your next arena concert, corporate gala, or festival tour with India's most trusted production team.
+          </p>
+          <button class="btn btn-cyan js-open-plan-modal">GET IN TOUCH NOW</button>
+        </div>
+
+        <div class="footer-contact-grid">
+
+          <a href="tel:+919100061212" class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--text-muted);">PHONE
+                INQUIRIES</div>
+              <div style="font-size: 16px; font-weight: 700; color: #fff;">+91 91000 61212</div>
+            </div>
+          </a>
+
+          <a href="mailto:hello@elevenpointtwo.com" class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--text-muted);">EMAIL
+                ADDRESS</div>
+              <div style="font-size: 16px; font-weight: 700; color: #fff;">hello@elevenpointtwo.com</div>
+            </div>
+          </a>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--text-muted);">HEAD OFFICE
+              </div>
+              <div style="font-size: 16px; font-weight: 700; color: #fff;">Hyderabad, India</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Eleven Point Two. All Rights Reserved.</div>
+
+        <div class="social-links">
+          <a href="#" class="social-link" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+
+          <a href="#" class="social-link" title="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+              </path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </a>
+
+          <a href="#" class="social-link" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+
+          <a href="#" class="social-link" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SHOWREEL VIDEO & AUDIO VISUALIZER MODAL -->
+  <div class="modal-backdrop" id="showreelModal">
+    <div class="modal-container" style="max-width: 900px;">
+      <button class="modal-close" aria-label="Close Modal">&times;</button>
+      <div style="text-align: center; margin-bottom: 20px;">
+        <span class="section-eyebrow">ELEVEN POINT TWO SHOWREEL</span>
+        <h3 style="font-size: 24px; font-weight: 800;">LIVE EXPERIENCE REEL</h3>
+      </div>
+      <div
+        style="position: relative; border-radius: 12px; overflow: hidden; background: #000; border: 1px solid var(--glass-border);">
+        <canvas id="visualizerCanvas" style="width: 100%; height: 360px; display: block;"></canvas>
+      </div>
+      <div style="margin-top: 20px; text-align: center; color: var(--text-secondary); font-size: 13px;">
+        ✦ Interactive Audio Spectrum & Live Tour Highlights Visualizer
+      </div>
+    </div>
+  </div>
+
+  <!-- PLAN YOUR EVENT MODAL WIZARD -->
+  <div class="modal-backdrop" id="planEventModal">
+    <div class="modal-container">
+      <button class="modal-close" aria-label="Close Modal">&times;</button>
+
+      <div style="margin-bottom: 24px;">
+        <span class="section-eyebrow">EVENT INQUIRY</span>
+        <h3 style="font-size: 24px; font-weight: 800; margin-top: 4px;">PLAN YOUR NEXT <span
+            class="cyan-text">EVENT</span></h3>
+      </div>
+
+      <form id="eventInquiryForm">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" placeholder="e.g. Vikram Sharma" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-input" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-input" placeholder="name@company.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Service Required</label>
+            <select class="form-select" required>
+              <option value="">Select Service...</option>
+              <option value="Live Concerts">Live Concerts & Tours</option>
+              <option value="Corporate Events">Corporate Events & Galas</option>
+              <option value="Ticketing">Ticketing & Promotion</option>
+              <option value="Artist Management">Artist Management</option>
+              <option value="Creative Production">Creative & Stage Production</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Event Details / Requirements</label>
+          <textarea class="form-textarea" rows="4"
+            placeholder="Tell us about your event vision, date, estimated audience, budget range, and preferred artists..."
+            required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-cyan" style="width: 100%; margin-top: 10px;">
+          <span>Submit Inquiry</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TICKET BOOKING MODAL -->
+  <div class="modal-backdrop" id="ticketModal">
+    <div class="modal-container">
+      <button class="modal-close" aria-label="Close Modal">&times;</button>
+
+      <div style="margin-bottom: 24px;">
+        <span class="section-eyebrow">CONCERT TICKETING</span>
+        <h3 style="font-size: 24px; font-weight: 800; margin-top: 4px;">BOOK YOUR <span class="cyan-text">TICKETS</span>
+        </h3>
+      </div>
+
+      <form id="ticketBookingForm">
+        <div class="form-group">
+          <label class="form-label">Select Concert / Show</label>
+          <select class="form-select" required>
+            <option value="Koti Symphonic Night - Oct 28, 2026 (Hyderabad)">Koti Symphonic Night 2026 — Oct 28,
+              Hyderabad</option>
+            <option value="Timeless with Sunitha - Nov 12, 2026 (Delhi)">Timeless with Sunitha Live — Nov 12, New Delhi
+            </option>
+            <option value="MLC Music & Comedy Fest - Dec 05, 2026 (Mumbai)">MLC Music & Comedy Fest — Dec 05, Mumbai
+            </option>
+            <option value="New Year Eve Star Arena - Dec 31, 2026 (Hyderabad)">New Year Eve Star Arena — Dec 31,
+              Hyderabad</option>
+          </select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label class="form-label">Ticket Category</label>
+            <select class="form-select" required>
+              <option value="GA Standing">General Access Standing (₹1,499)</option>
+              <option value="Fan Pit">Front Fan Pit (₹2,999)</option>
+              <option value="VIP Pass">VIP Lounge Pass (₹5,999)</option>
+              <option value="VVIP Table">VVIP Table Package (₹14,999)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Number of Passes</label>
+            <select class="form-select" required>
+              <option value="1">1 Pass</option>
+              <option value="2" selected>2 Passes</option>
+              <option value="4">4 Passes</option>
+              <option value="6">6 Passes</option>
+              <option value="10">10 Passes (Group Package)</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-input" placeholder="e.g. Rahul Verma" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-input" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email Address (E-Tickets will be sent here)</label>
+          <input type="email" class="form-input" placeholder="rahul@example.com" required>
+        </div>
+
+        <button type="submit" class="btn btn-cyan" style="width: 100%; margin-top: 10px;">
+          <span>🎟️ Confirm Ticket Reservation</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Sound Controller Widget -->
+  <div class="sound-widget" id="soundWidget" title="Toggle Ambient Audio Soundscape">
+    <div class="sound-widget-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+      </svg>
+    </div>
+    <div class="sound-widget-wave">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- JavaScript Engine -->
+  <script src="app.js"></script>
+</body>
+
+</html>
