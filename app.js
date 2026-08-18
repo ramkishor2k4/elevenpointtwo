@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initScrollProgressBar();
   initScrollReveals();
+  initHeroVideo();
   initThree3DScene();
   initHeroParticles();
   initStatsCounter();
@@ -347,6 +348,19 @@ function initScrollReveals() {
   }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
 
   revealElements.forEach(el => observer.observe(el));
+}
+
+/* Hero Background Video Initialization */
+function initHeroVideo() {
+  const video = document.querySelector('.hero-bg-video');
+  if (!video) return;
+
+  const playPromise = video.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {
+      // Browser low-power or autoplay restrictions override
+    });
+  }
 }
 
 /* Hero Ambient Particles Canvas */
