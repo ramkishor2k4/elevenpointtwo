@@ -691,6 +691,20 @@ h6 {
   color: #fff;
 }
 
+.brand-logo-img {
+  height: 48px;
+  max-height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.45));
+}
+
 .logo-icon {
   width: 38px;
   height: 38px;
