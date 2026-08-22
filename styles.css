@@ -1359,6 +1359,9 @@ h6 {
 
 /* Skeuomorphic Concert Ticket Cards */
 .production-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   height: 420px;
   border-radius: 20px;
   position: relative;
@@ -1540,7 +1543,7 @@ h6 {
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--card-accent, var(--accent-cyan));
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 4px 12px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
   backdrop-filter: blur(8px);
@@ -1552,7 +1555,7 @@ h6 {
 
 .production-card:hover .production-play-btn {
   background: var(--card-accent, var(--accent-cyan));
-  color: #07090e;
+  color: #07090e !important;
   border-color: var(--card-accent, var(--accent-cyan));
   box-shadow: 0 0 20px var(--card-glow, rgba(56, 189, 248, 0.6));
   transform: scale(1.05);

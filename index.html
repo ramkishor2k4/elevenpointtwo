@@ -466,8 +466,9 @@
 
         <div class="productions-grid">
 
-          <div class="glass-card production-card card-theme-cyan reveal-scale delay-1 js-open-ticket-modal"
-            data-category="concert">
+          <!-- BOOKING LINK PLACEHOLDER 1: Replace "https://in.bookmyshow.com" with your BookMyShow / platform link for Koti Symphonic Night -->
+          <a href="https://in.bookmyshow.com" target="_blank" rel="noopener noreferrer"
+            class="glass-card production-card card-theme-cyan reveal-scale delay-1" data-category="concert">
             <div class="ticket-notch notch-left"></div>
             <div class="ticket-notch notch-right"></div>
             <span class="show-date-badge skeuo-badge">OCT 28, 2026</span>
@@ -483,15 +484,16 @@
                   <span class="barcode-lines">|||| | |||| || |</span>
                   <span class="barcode-num">#EPT-8829</span>
                 </div>
-                <div class="production-play-btn" style="opacity: 1; transform: none; color: var(--accent-cyan);">
-                  <span>RESERVE TICKETS</span>
+                <div class="production-play-btn">
+                  <span>BOOK TICKETS ↗</span>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
 
-          <div class="glass-card production-card card-theme-purple reveal-scale delay-2 js-open-ticket-modal"
-            data-category="symphonic">
+          <!-- BOOKING LINK PLACEHOLDER 2: Replace "https://in.bookmyshow.com" with your BookMyShow / platform link for Sunitha Live -->
+          <a href="https://in.bookmyshow.com" target="_blank" rel="noopener noreferrer"
+            class="glass-card production-card card-theme-purple reveal-scale delay-2" data-category="symphonic">
             <div class="ticket-notch notch-left"></div>
             <div class="ticket-notch notch-right"></div>
             <span class="show-date-badge skeuo-badge">NOV 12, 2026</span>
@@ -507,15 +509,16 @@
                   <span class="barcode-lines">|| | |||| | ||||</span>
                   <span class="barcode-num">#EPT-9104</span>
                 </div>
-                <div class="production-play-btn" style="opacity: 1; transform: none; color: var(--accent-purple);">
-                  <span>RESERVE TICKETS</span>
+                <div class="production-play-btn">
+                  <span>BOOK TICKETS ↗</span>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
 
-          <div class="glass-card production-card card-theme-gold reveal-scale delay-3 js-open-ticket-modal"
-            data-category="festival">
+          <!-- BOOKING LINK PLACEHOLDER 3: Replace "https://in.bookmyshow.com" with your BookMyShow / platform link for MLC Fest -->
+          <a href="https://in.bookmyshow.com" target="_blank" rel="noopener noreferrer"
+            class="glass-card production-card card-theme-gold reveal-scale delay-3" data-category="festival">
             <div class="ticket-notch notch-left"></div>
             <div class="ticket-notch notch-right"></div>
             <span class="show-date-badge skeuo-badge">DEC 05, 2026</span>
@@ -531,15 +534,16 @@
                   <span class="barcode-lines">|||| || | || |||</span>
                   <span class="barcode-num">#EPT-4491</span>
                 </div>
-                <div class="production-play-btn" style="opacity: 1; transform: none; color: var(--accent-gold);">
-                  <span>RESERVE TICKETS</span>
+                <div class="production-play-btn">
+                  <span>BOOK TICKETS ↗</span>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
 
-          <div class="glass-card production-card card-theme-emerald reveal-scale delay-4 js-open-ticket-modal"
-            data-category="corporate">
+          <!-- BOOKING LINK PLACEHOLDER 4: Replace "https://in.bookmyshow.com" with your BookMyShow / platform link for New Year Eve -->
+          <a href="https://in.bookmyshow.com" target="_blank" rel="noopener noreferrer"
+            class="glass-card production-card card-theme-emerald reveal-scale delay-4" data-category="corporate">
             <div class="ticket-notch notch-left"></div>
             <div class="ticket-notch notch-right"></div>
             <span class="show-date-badge skeuo-badge">DEC 31, 2026</span>
@@ -555,22 +559,23 @@
                   <span class="barcode-lines">|| | ||| |||| ||</span>
                   <span class="barcode-num">#EPT-3112</span>
                 </div>
-                <div class="production-play-btn" style="opacity: 1; transform: none; color: var(--accent-emerald);">
-                  <span>RESERVE TICKETS</span>
+                <div class="production-play-btn">
+                  <span>BOOK TICKETS ↗</span>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
 
         </div>
 
         <div class="view-all-center reveal">
-          <button class="btn btn-cyan js-open-ticket-modal">
-            <span>🎟️ BOOK TICKETS</span>
+          <!-- MAIN BOOKING LINK PLACEHOLDER: Replace "https://in.bookmyshow.com" with your main BookMyShow channel/events page -->
+          <a href="https://in.bookmyshow.com" target="_blank" rel="noopener noreferrer" class="btn btn-cyan">
+            <span>🎟️ BOOK TICKETS ON BOOKMYSHOW</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M6 12L10 8L6 4"></path>
             </svg>
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -969,77 +974,6 @@
 
         <button type="submit" class="btn btn-cyan" style="width: 100%; margin-top: 10px;">
           <span>Submit Inquiry</span>
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- TICKET BOOKING MODAL -->
-  <div class="modal-backdrop" id="ticketModal">
-    <div class="modal-container">
-      <button class="modal-close" aria-label="Close Modal">&times;</button>
-
-      <div style="margin-bottom: 24px;">
-        <span class="section-eyebrow">CONCERT TICKETING</span>
-        <h3 style="font-size: 24px; font-weight: 800; margin-top: 4px;">BOOK YOUR <span class="cyan-text">TICKETS</span>
-        </h3>
-      </div>
-
-      <form id="ticketBookingForm">
-        <div class="form-group">
-          <label class="form-label">Select Concert / Show</label>
-          <select class="form-select" required>
-            <option value="Koti Symphonic Night - Oct 28, 2026 (Hyderabad)">Koti Symphonic Night 2026 — Oct 28,
-              Hyderabad</option>
-            <option value="Timeless with Sunitha - Nov 12, 2026 (Delhi)">Timeless with Sunitha Live — Nov 12, New Delhi
-            </option>
-            <option value="MLC Music & Comedy Fest - Dec 05, 2026 (Mumbai)">MLC Music & Comedy Fest — Dec 05, Mumbai
-            </option>
-            <option value="New Year Eve Star Arena - Dec 31, 2026 (Hyderabad)">New Year Eve Star Arena — Dec 31,
-              Hyderabad</option>
-          </select>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-          <div class="form-group">
-            <label class="form-label">Ticket Category</label>
-            <select class="form-select" required>
-              <option value="GA Standing">General Access Standing (₹1,499)</option>
-              <option value="Fan Pit">Front Fan Pit (₹2,999)</option>
-              <option value="VIP Pass">VIP Lounge Pass (₹5,999)</option>
-              <option value="VVIP Table">VVIP Table Package (₹14,999)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Number of Passes</label>
-            <select class="form-select" required>
-              <option value="1">1 Pass</option>
-              <option value="2" selected>2 Passes</option>
-              <option value="4">4 Passes</option>
-              <option value="6">6 Passes</option>
-              <option value="10">10 Passes (Group Package)</option>
-            </select>
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-          <div class="form-group">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-input" placeholder="e.g. Rahul Verma" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Phone Number</label>
-            <input type="tel" class="form-input" placeholder="+91 98765 43210" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Email Address (E-Tickets will be sent here)</label>
-          <input type="email" class="form-input" placeholder="rahul@example.com" required>
-        </div>
-
-        <button type="submit" class="btn btn-cyan" style="width: 100%; margin-top: 10px;">
-          <span>🎟️ Confirm Ticket Reservation</span>
         </button>
       </form>
     </div>

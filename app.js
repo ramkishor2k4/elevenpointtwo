@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCategoryTabs();
   initSoundWidget();
   initFloatingMusicNotes();
-  initTicketModal();
 });
 
 /* Floating Unicode Musical Notes Generator on Scroll */
@@ -65,45 +64,6 @@ function initFloatingMusicNotes() {
     setTimeout(() => {
       note.remove();
     }, 3800);
-  }
-}
-
-/* Ticket Booking Modal Logic */
-function initTicketModal() {
-  const ticketModal = document.getElementById('ticketModal');
-  const openTicketBtns = document.querySelectorAll('.js-open-ticket-modal');
-  const form = document.getElementById('ticketBookingForm');
-
-  if (!ticketModal) return;
-
-  openTicketBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      ticketModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
-
-      submitBtn.innerHTML = '<span>Processing Ticket Request...</span>';
-      submitBtn.disabled = true;
-
-      setTimeout(() => {
-        submitBtn.innerHTML = '<span style="color: #34d399;">✓ Ticket Reservation Confirmed!</span>';
-        setTimeout(() => {
-          form.reset();
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-          ticketModal.classList.remove('active');
-          document.body.style.overflow = '';
-        }, 1800);
-      }, 1200);
-    });
   }
 }
 
@@ -669,11 +629,8 @@ function initGlassSpotlight() {
 function initModals() {
   const planModal = document.getElementById('planEventModal');
   const showreelModal = document.getElementById('showreelModal');
-  const ticketModal = document.getElementById('ticketModal');
-
   const openPlanBtns = document.querySelectorAll('.js-open-plan-modal');
   const openShowreelBtns = document.querySelectorAll('.js-open-showreel-modal');
-  const openTicketBtns = document.querySelectorAll('.js-open-ticket-modal');
   const closeBtns = document.querySelectorAll('.modal-close');
   const backdrops = document.querySelectorAll('.modal-backdrop');
 
@@ -689,14 +646,6 @@ function initModals() {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       showreelModal?.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  openTicketBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      ticketModal?.classList.add('active');
       document.body.style.overflow = 'hidden';
     });
   });
